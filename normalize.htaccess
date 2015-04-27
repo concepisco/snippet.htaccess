@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+		RewriteEngine on
+		RewriteCond %{HTTP_HOST} ^example\.com
+		RewriteRule (.*) http://www.example.com/$1 [R=301,L]
+        RewriteEngine on
+        RewriteCond %{THE_REQUEST} ^.*/index.(cgi|do|java|html|htm|php|py|rb|shtml|xhtml)
+        RewriteRule ^(.*)index.(cgi|do|java|html|htm|php|py|rb|shtml|xhtml)$ http://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>

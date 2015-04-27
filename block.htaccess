@@ -1,0 +1,7 @@
+# Block .htaccess|.htpasswd|.ini access
+<FilesMatch "\.(htaccess|htpasswd|ini)$">
+	Deny from all
+	<IfModule mod_headers.c>
+		Header set X-Robots-Tag "noindex, noarchive"
+	</IfModule>
+</FilesMatch>

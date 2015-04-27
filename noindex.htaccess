@@ -1,0 +1,15 @@
+# Block Robot
+SetEnvIfNoCase User-Agent "msnbot" shutout
+SetEnvIf User-Agent "Googlebot" shutout
+SetEnvIf User-Agent "Googlebot-Image" shutout
+Deny from 66.249.64.0/19
+SetEnvIf User-Agent "Slurp" shutout
+SetEnvIfNoCase User-Agent "Yahoo" shutout
+Deny from 72.30.0.0/16
+Deny from 74.6.0.0/16
+SetEnvIf User-Agent "inktomi" shutout
+SetEnvIf User-Agent "moget" shutout
+SetEnvIf User-Agent "ichiro" shutout
+SetEnvIf User-Agent "ia_archiver" shutout
+SetEnvIfNoCase User-Agent "MarkAgent" shutout
+SetEnvIfNoCase User-Agent "marsflag" shutout

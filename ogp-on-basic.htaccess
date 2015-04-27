@@ -1,0 +1,11 @@
+BrowserMatchNoCase facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php) is_facebook=1
+BrowserMatchNoCase mixi-check/1.0 (http://mixi.jp/) is_mixi=1
+
+SetEnvIf User-Agent "^facebookexternalhit.*$" is_facebook
+SetEnvIf User-Agent "^facebookplatform.*$" is_facebook
+
+Satisfy any
+Require valid-user
+Order allow,deny
+allow from env=is_facebook
+allow from env=is_mixi

@@ -1,0 +1,18 @@
+# Config php for PHP5
+<IfModule mod_php5.c>
+	php_flag mail.add_x_header Off
+	php_flag mbstring.encoding_translation Off
+	php_flag mbstring.strict_detection Off
+	php_value date.timezone Asia/Tokyo
+	php_value mbstring.language ja
+	php_value mbstring.http_input utf-8
+	php_value mbstring.http_output utf-8
+	php_value mbstring.internal_encoding utf-8
+	php_value mbstring.script_encoding utf-8	
+	php_value display_errors On
+	php_value error_reporting 6143
+	php_value realpath_cache_size 64K
+	php_value memory_limit 512M
+	php_value post_max_size 256M
+	php_value upload_max_filesize 256M
+</IfModule>
